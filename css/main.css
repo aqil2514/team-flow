@@ -1,0 +1,1025 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+.button-more {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffca1d;
+  color: #2c2c2c;
+}
+
+.img-testi {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.sub-img-testi {
+  position: absolute;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  width: 100%;
+  padding: 1rem;
+  z-index: 999;
+}
+nav #logo figure {
+  display: flex;
+  flex-direction: row;
+  max-width: 200px;
+  cursor: pointer;
+}
+nav #logo figure img {
+  display: inline-block;
+}
+nav #logo figure figcaption {
+  font-family: "Open Sans";
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: white;
+  margin-left: 0.5rem;
+}
+nav #menu {
+  flex: 1.8;
+}
+nav #menu ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 10px;
+}
+nav #menu ul li {
+  list-style: none;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 1rem;
+  color: #eee;
+  cursor: pointer;
+  transition: 0.3s;
+}
+nav #menu ul li:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 5px black;
+}
+nav #menu ul li a {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 1rem;
+  color: #eee;
+  text-decoration: none;
+  transition: 0.3s;
+}
+nav #menu ul li a:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 10px black;
+}
+nav #menu ul details summary {
+  position: relative;
+  list-style: none;
+  width: 6rem;
+}
+nav #menu ul details summary::after {
+  content: "˅";
+  position: absolute;
+  right: 0;
+  transition: 0.3s;
+}
+nav #menu ul details[open] {
+  text-shadow: 0 0 5px black;
+}
+nav #menu ul details[open] summary::after {
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+nav #menu ul details ul {
+  display: block;
+}
+nav #menu ul details ul li {
+  transform: none;
+  text-shadow: none;
+}
+nav #logsign {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex: 1.3;
+}
+nav #logsign button {
+  font-family: "Poppins";
+  font-weight: 550;
+  font-size: 1rem;
+  color: initial;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  margin: 1rem;
+  position: relative;
+  transition: 0.5s;
+}
+nav #logsign button span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  border-radius: 1rem;
+  transition: 0.3s;
+  z-index: -1;
+}
+nav #logsign button:hover span {
+  width: 100%;
+}
+nav #logsign button:hover {
+  background-color: transparent !important;
+  color: #fff;
+}
+nav #logsign a:nth-child(1) button {
+  background-color: transparent;
+  color: #757575;
+}
+nav #logsign a:nth-child(1) button span {
+  background-color: #ffca1d;
+}
+nav #logsign a:nth-child(2) button {
+  background-color: #ffca1d;
+  color: #1f1f1f;
+}
+nav #logsign a:nth-child(2) button span {
+  background-color: #eee;
+}
+
+#intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url(../img/bg-opening.png);
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#intro #intro-svg {
+  position: absolute;
+  width: 50%;
+  height: 100vh;
+}
+#intro #intro-circle-1 {
+  cx: 500;
+  cy: 100;
+  r: 11;
+  stroke: #b16ee5;
+  fill: #b16ee5;
+}
+#intro #intro-circle-2 {
+  cx: 400;
+  cy: 300;
+  r: 15;
+  stroke: #6ce1b7;
+  fill: transparent;
+  stroke-width: 3px;
+}
+#intro #intro-rect {
+  x: 400;
+  y: 0;
+  width: 15px;
+  height: 15px;
+  stroke: #6ce1b7;
+  stroke-width: 3px;
+  fill: transparent;
+  transform: rotateZ(45deg);
+  transform-origin: center;
+}
+#intro #intro-greeting {
+  margin: 8rem 5rem 2rem;
+  z-index: 1;
+  max-width: 530px;
+  cursor: default;
+}
+#intro #intro-welcome,
+#intro #intro-quotes {
+  font-family: "Open Sans";
+}
+#intro #intro-welcome {
+  position: relative;
+  color: #606060;
+  width: 60%;
+  padding: 0.3rem;
+  border-radius: 10px;
+}
+#intro #intro-welcome:hover span:first-child {
+  animation: intro-welcome 1s 2 ease-in-out;
+}
+#intro #intro-welcome:hover::before {
+  animation: emot-animation 0.5s 4 ease-in-out;
+}
+#intro #intro-welcome span:first-child {
+  background-color: #ffffff;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transform-origin: left;
+}
+#intro #intro-welcome::before {
+  content: "👋";
+  position: absolute;
+  transform-origin: right bottom;
+}
+#intro #intro-welcome #welcome-hide {
+  visibility: hidden;
+}
+#intro #intro-h1 {
+  font-family: "Poppins";
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+}
+#intro #intro-hline {
+  background-color: #3adad9;
+  width: 10%;
+  height: 3px;
+  border: none;
+  border-radius: 10px;
+}
+#intro #intro-quotes {
+  font-size: 1.3rem;
+  color: #fff;
+  margin: 1rem 0;
+}
+#intro #intro-button {
+  color: #2c2c2c;
+  background-color: #ffca1d;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+#intro #intro-button:hover {
+  box-shadow: 1px 0 3px black;
+}
+#intro #intro-button:active {
+  box-shadow: 1px 0 10px black;
+}
+#intro #intro-team {
+  margin: 8rem 5rem 2rem;
+  z-index: 1;
+  max-width: 530px;
+}
+#intro #tfp-circle {
+  cx: 375;
+  cy: 120;
+  r: 12;
+  stroke: #f8c953;
+  fill: transparent;
+  stroke-width: 2px;
+}
+#intro #intro-team-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 35rem;
+  right: 3rem;
+}
+#intro #first-person {
+  display: flex;
+}
+#intro #first-person figure {
+  position: relative;
+}
+#intro #first-person figure img {
+  width: 9rem;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+}
+#intro #first-person figure img:hover {
+  animation: emot-animation 0.5s 2 ease;
+}
+#intro #first-person figure figcaption {
+  position: absolute;
+  font-family: "Open Sans";
+  font-weight: bold;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 0.2rem 2rem;
+  bottom: 50px;
+  left: -35px;
+  z-index: 3;
+}
+#intro #first-img-detail {
+  margin: 2rem 1rem;
+  background-color: #fff7f7;
+  width: 15rem;
+  padding: 0.5rem;
+}
+#intro #first-img-detail p:nth-child(1) {
+  font-family: "Open Sans";
+  float: right;
+  background-color: #3adad9;
+  color: white;
+  padding: 0.2rem 0.8rem;
+  border-radius: 10px;
+}
+#intro #first-img-detail p:nth-child(2) {
+  font-family: "Open Sans";
+  margin-top: 2rem;
+  color: #6c71a1;
+}
+#intro #first-img-detail p:nth-child(3) {
+  font-family: "Poppins";
+  font-weight: bold;
+  color: #2b3377;
+}
+#intro #second-person {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 9rem;
+}
+#intro #second-person figure {
+  position: relative;
+}
+#intro #second-person figure img {
+  width: 7rem;
+  border-radius: 50%;
+}
+#intro #second-person figure img:hover {
+  animation: emot-animation 0.5s 2 ease;
+}
+#intro #second-person figure figcaption {
+  position: absolute;
+  font-family: "Open Sans";
+  background-color: #fff;
+  color: #279e73;
+  border-radius: 10px;
+  padding: 0.2rem 2rem;
+  top: 5px;
+  right: -60px;
+}
+#intro #second-img-detail {
+  margin: 2rem 1rem 2rem -4rem;
+  padding: 0 1rem;
+  border-radius: 10px;
+  background-color: #fff7f7;
+  width: 20rem;
+}
+#intro #second-img-detail p:nth-child(1) {
+  font-family: "Open Sans";
+  float: right;
+  background-color: #fd9b79;
+  color: white;
+  padding: 0.2rem 0.8rem;
+  border-radius: 10px;
+}
+#intro #second-img-detail p:nth-child(2) {
+  font-family: "Open Sans";
+  margin-top: 2rem;
+  color: #6c71a1;
+}
+#intro #second-img-detail p:nth-child(3) {
+  font-family: "Poppins";
+  font-weight: bold;
+  color: #2b3377;
+}
+#intro .stars {
+  cursor: default;
+  z-index: 1;
+  position: relative;
+}
+#intro .stars .active-star {
+  stroke: #ffcd1a;
+  fill: #ffcd1a;
+}
+#intro .stars .active-star:hover {
+  animation: sr-animation 1s ease;
+}
+#intro .stars .nonactive-star {
+  stroke: #cccccc;
+  fill: #cccccc;
+}
+
+#wycd {
+  height: 100vh;
+}
+#wycd hr {
+  background-color: #ffca1d;
+  border: none;
+  border-radius: 0.1rem;
+  width: 3rem;
+  height: 0.2rem;
+  margin: 3rem 2rem 1rem;
+}
+#wycd #wycd-ask {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#wycd #wycd-ask p {
+  font-family: "Poppins";
+  font-weight: 550;
+  font-size: 1rem;
+  color: #515151;
+  margin-left: 2rem;
+  cursor: default;
+  width: 25rem;
+}
+#wycd #wycd-ask img {
+  width: 30rem;
+  margin-right: 4rem;
+}
+#wycd h2 {
+  font-family: "Open Sans";
+  font-weight: 500;
+  font-size: 2rem;
+  color: #515151;
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  cursor: default;
+}
+#wycd h2 span {
+  color: #ffca1d;
+}
+#wycd #wycd-service {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#wycd #wycd-service div {
+  text-align: center;
+  margin: 2rem;
+  width: 33.3333333333%;
+}
+#wycd #wycd-service h3 {
+  font-family: "Open Sans";
+  font-weight: bold;
+  font-size: 1rem;
+  color: #2b3377;
+}
+#wycd #wycd-service p {
+  font-family: "Open Sans";
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: #585858;
+}
+#wycd #wycd-service h3,
+#wycd #wycd-service p {
+  cursor: default;
+}
+#wycd #wycd-service img {
+  display: block;
+  margin: 1rem auto;
+  width: 4rem;
+}
+
+#feature {
+  cursor: default;
+}
+#feature #f-title {
+  font-family: "Open Sans";
+  font-weight: 500;
+  font-size: 2rem;
+  color: #515151;
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+}
+#feature #f-title span {
+  color: #ffca1d;
+}
+#feature #fe-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 4rem;
+}
+#feature #fe-content img {
+  width: 30rem;
+}
+#feature #fe-content #f-content h2 {
+  font-family: "Nunito Sans";
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #515151;
+  margin: 7rem 10rem 2rem;
+  width: 22rem;
+}
+#feature #fe-content #f-content hr {
+  background-color: #ffca1d;
+  border: none;
+  border-radius: 0.1rem;
+  width: 3rem;
+  height: 0.2rem;
+  margin: 1rem 10rem 2rem;
+}
+#feature #fe-content #f-content p {
+  font-family: "Nunito Sans";
+  font-weight: 500;
+  font-size: 1rem;
+  color: #575757;
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+
+#setup {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100vh;
+}
+#setup #setup-text {
+  margin: 15rem 5rem 5rem;
+}
+#setup #setup-text h2 {
+  font-family: "Nunito Sans";
+  font-weight: 900;
+  font-size: 1.8rem;
+  color: #4a4a4a;
+}
+#setup #setup-text hr {
+  margin: 1rem 0;
+  width: 3rem;
+  height: 0.2rem;
+  border: none;
+  background-color: #fed369;
+}
+#setup #setup-text p {
+  font-family: "Nunito Sans";
+  font-weight: 500;
+  font-size: 1rem;
+  color: #575757;
+  text-align: justify;
+}
+#setup #setup-img {
+  position: relative;
+}
+#setup #setup-img img {
+  display: block;
+  width: 35rem;
+  margin-top: 7.1rem;
+  margin-right: 6rem;
+}
+
+#gotoup {
+  font-family: "Poppins";
+  font-weight: 900;
+  font-size: 1rem;
+  color: #fff;
+  display: none;
+  position: fixed;
+  background-color: #686df1;
+  text-decoration: none;
+  bottom: 5%;
+  right: 5%;
+  padding: 1rem 1.3rem;
+  border-radius: 10px;
+}
+
+#integrate {
+  text-align: center;
+  height: 100vh;
+  padding-top: 9rem;
+}
+#integrate h2 {
+  font-family: "Nunito Sans";
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: #565656;
+  text-align: center;
+  margin: 1rem auto 0;
+  width: 40rem;
+}
+#integrate h2 span {
+  color: #ffca1d;
+}
+#integrate #integrate-pictures {
+  display: block;
+  margin: 1rem auto;
+}
+#integrate #integrate-pictures img {
+  display: inline-block;
+  margin: 1rem;
+  width: 10%;
+}
+
+#save-time {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 2rem;
+}
+#save-time img {
+  width: 35rem;
+  height: 30rem;
+}
+#save-time #save-text {
+  margin: 10rem 5rem 5rem;
+}
+#save-time #save-text h2 {
+  font-family: "Nunito Sans";
+  font-weight: 900;
+  font-size: 1.8rem;
+  color: #4a4a4a;
+}
+#save-time #save-text hr {
+  margin: 1rem 0;
+  width: 3rem;
+  height: 0.2rem;
+  border: none;
+  background-color: #fed369;
+}
+#save-time #save-text p {
+  font-family: "Nunito Sans";
+  font-weight: 500;
+  font-size: 1rem;
+  color: #575757;
+  text-align: justify;
+}
+
+#visualize {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 2rem;
+}
+#visualize img {
+  width: 35rem;
+  height: 30rem;
+}
+#visualize #visualize-text {
+  margin: 10rem 5rem 5rem;
+}
+#visualize #visualize-text h2 {
+  font-family: "Nunito Sans";
+  font-weight: 900;
+  font-size: 1.8rem;
+  color: #4a4a4a;
+}
+#visualize #visualize-text hr {
+  margin: 1rem 0;
+  width: 3rem;
+  height: 0.2rem;
+  border: none;
+  background-color: #fed369;
+}
+#visualize #visualize-text p {
+  font-family: "Nunito Sans";
+  font-weight: 500;
+  font-size: 1rem;
+  color: #575757;
+  text-align: justify;
+}
+
+#customer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 2rem;
+}
+#customer figure {
+  position: relative;
+}
+#customer figure img {
+  margin-left: 5rem;
+  width: 25rem;
+}
+#customer figure figcaption {
+  display: grid;
+  grid-template-areas: "comment comment" "peter head";
+  font-family: "Nunito Sans";
+  font-weight: 500;
+  font-size: 1rem;
+  color: #3c405f;
+  position: absolute;
+  bottom: 20%;
+  right: 0;
+  width: 17rem;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+#customer figure figcaption p:nth-child(1) {
+  font-size: 0.7rem;
+  grid-area: comment;
+  margin-bottom: 1rem;
+}
+#customer figure figcaption p:nth-child(2) {
+  grid-area: peter;
+  color: #2d3150;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+#customer figure figcaption p:nth-child(3) {
+  grid-area: head;
+  color: #9c9fbb;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+#customer #customer-text {
+  margin: 10rem 5rem 5rem;
+}
+#customer #customer-text h2 {
+  font-family: "Nunito Sans";
+  font-weight: 900;
+  font-size: 1.8rem;
+  color: #4a4a4a;
+}
+#customer #customer-text hr {
+  margin: 1rem 0;
+  width: 3rem;
+  height: 0.2rem;
+  border: none;
+  background-color: #fed369;
+}
+#customer #customer-text p {
+  font-family: "Nunito Sans";
+  font-weight: 500;
+  font-size: 1rem;
+  color: #575757;
+  text-align: justify;
+}
+#customer #customer-text button {
+  margin-top: 1rem;
+}
+
+#testimonials {
+  height: 100vh;
+  padding: 4rem;
+  position: relative;
+}
+#testimonials h2 {
+  font-family: "Nunito Sans";
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #2d2d2d;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+#testimonials h2 span:nth-child(2) {
+  color: #ffca1d;
+  font-weight: 900;
+}
+#testimonials #testi-container {
+  display: block;
+  margin: 1rem auto;
+  background: url("../img/testi-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-align: center;
+  width: 100%;
+  height: 90%;
+  padding-top: 4.5rem;
+}
+#testimonials #testi-container figure {
+  position: relative;
+}
+#testimonials #testi-container figure img {
+  width: 4rem;
+  height: 4rem;
+}
+#testimonials #testi-container figure figcaption {
+  position: relative;
+  background-color: #fff;
+  margin: 0 auto;
+  border-radius: 10px;
+  width: 20rem;
+  padding: 2rem;
+}
+#testimonials #testi-container figure figcaption::before {
+  content: '"';
+  position: absolute;
+  top: -5%;
+  left: 5%;
+  font-size: 5rem;
+  font-family: "Lobster";
+  color: #edeef6;
+}
+#testimonials #testi-container figure figcaption h2,
+#testimonials #testi-container figure figcaption p {
+  font-family: "Nunito Sans";
+  font-weight: 900;
+  font-size: 1rem;
+  color: #2d3150;
+}
+#testimonials #testi-container figure figcaption p {
+  font-weight: 500;
+  font-size: 0.7rem;
+  color: #3c405f;
+}
+#testimonials #testi-container img:nth-child(2), #testimonials #testi-container img:nth-child(3) {
+  top: 32%;
+  height: 3rem;
+  width: 3rem;
+}
+#testimonials #testi-container img:nth-child(2) {
+  left: 32%;
+}
+#testimonials #testi-container img:nth-child(3) {
+  right: 32%;
+}
+#testimonials #testi-container img:nth-child(4), #testimonials #testi-container img:nth-child(5) {
+  top: 60%;
+  width: 5rem;
+  height: 5rem;
+}
+#testimonials #testi-container img:nth-child(4) {
+  left: 25%;
+}
+#testimonials #testi-container img:nth-child(5) {
+  right: 25%;
+}
+#testimonials #testi-container img:nth-child(6), #testimonials #testi-container img:nth-child(7) {
+  bottom: 10%;
+  width: 3rem;
+  height: 3rem;
+}
+#testimonials #testi-container img:nth-child(6) {
+  left: 40%;
+}
+#testimonials #testi-container img:nth-child(7) {
+  right: 40%;
+}
+
+#subs {
+  text-align: center;
+  padding: 2rem;
+}
+#subs h2 {
+  font-family: "Nunito Sans";
+  font-weight: bold;
+  font-size: 1rem;
+  color: #eb801d;
+}
+#subs h1 {
+  font-family: "Nunito Sans";
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #2d3150;
+}
+#subs h3 {
+  font-family: "Nunito Sans";
+  font-weight: 500;
+  font-size: 1rem;
+  color: #2d3150;
+  margin-bottom: 1rem;
+}
+#subs form label[for=input-email] {
+  position: relative;
+}
+#subs form label[for=input-email] #input-email {
+  color: #2d3150;
+  width: 30rem;
+  height: 2rem;
+  padding: 1rem 1rem 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 0 #363a78;
+}
+#subs form label[for=input-email] #input-email:focus + #mail-input {
+  display: none;
+}
+#subs form label[for=input-email] #input-email:focus {
+  padding-left: 1rem;
+}
+#subs form label[for=input-email] #mail-input {
+  position: absolute;
+  left: 2%;
+  top: 0;
+  stroke: white;
+  fill: #9092b0;
+}
+#subs form label[for=input-email] #langganan {
+  position: absolute;
+  top: -25%;
+  right: 1%;
+  display: flex;
+  background-color: #686df1;
+  border-radius: 10px;
+  border: none;
+  padding: 0.2rem 0.4rem;
+}
+#subs form label[for=input-email] #langganan #send {
+  stroke: #fff;
+  width: 1.5rem;
+  height: 1.3rem;
+}
+#subs form label[for=input-email] #langganan p {
+  font-family: "Nunito Sans";
+  font-weight: 500;
+  font-size: 1rem;
+  color: #fff;
+  display: inline-block;
+}
+
+footer {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 8rem 4rem 0;
+}
+footer div {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 1rem;
+  color: #5c5e87;
+}
+footer div:nth-child(1) p {
+  margin: 2rem 0;
+}
+footer div:nth-child(1) h3 {
+  margin-bottom: 1rem;
+}
+footer div:nth-child(1) a {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 1rem;
+  color: #5c5e87;
+  text-decoration: none;
+  transition: 0.5s;
+}
+footer div:nth-child(1) a:hover {
+  color: #3adad9;
+}
+footer div:nth-child(1) #social-media {
+  margin: 2rem 0;
+}
+footer div:nth-child(1) #social-media a {
+  margin: 0.6rem;
+}
+footer div:nth-child(1) #social-media a img {
+  transition: 0.3s;
+}
+footer div:nth-child(1) #social-media a:hover img {
+  transform: scale(1.2) rotateZ(360deg);
+}
+footer div:not(:nth-child(1)) ul {
+  color: #2b3377;
+  font-weight: 900;
+}
+footer div:not(:nth-child(1)) ul li {
+  list-style: none;
+  font-weight: 500;
+  margin: 1rem 0;
+}
+footer div:not(:nth-child(1)) ul li a {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 1rem;
+  color: #5c5e87;
+  text-decoration: none;
+}
+footer div:not(:nth-child(1)) ul li a:hover {
+  color: #3adad9;
+}
+
+@keyframes intro-welcome {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes emot-animation {
+  from {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(45deg);
+  }
+  to {
+    transform: rotateZ(0deg);
+  }
+}
+@keyframes sr-animation {
+  from {
+    transform: scale(1) rotateZ(0deg);
+  }
+  50% {
+    transform: scale(2) rotateZ(360deg);
+  }
+  to {
+    transform: scale(1) rotateZ(360deg);
+  }
+}/*# sourceMappingURL=main.css.map */

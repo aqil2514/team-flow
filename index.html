@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Collaboration - Challenge by Code Design</title>
+
+    <!-- MY FONTS  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Nunito+Sans:opsz,wght@6..12,500;6..12,600;6..12,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- MY FAVICON -->
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+
+    <!-- MY STYLES  -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- DATA FEATHER  -->
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <!-- NAV START -->
+    <nav>
+      <div id="logo">
+        <figure>
+          <img src="img/logonav.png" alt="logo" />
+          <figcaption>TeamFlow</figcaption>
+        </figure>
+      </div>
+
+      <div id="menu">
+        <ul>
+          <li>
+            <details>
+              <summary>Product</summary>
+              <ul>
+                <li><a href="#" onclick="Update()">Coming Soon</a></li>
+                <li><a href="#" onclick="Update()">Coming Soon</a></li>
+                <li><a href="#" onclick="Update()">Coming Soon</a></li>
+                <li><a href="#" onclick="Update()">Coming Soon</a></li>
+                <li><a href="#" onclick="Update()">Coming Soon</a></li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>Solutions</summary>
+              <ul>
+                <li><a href="#" onclick="Update()">Coming Soon</a></li>
+                <li><a href="#" onclick="Update()">Coming Soon</a></li>
+                <li><a href="#" onclick="Update()">Coming Soon</a></li>
+                <li><a href="#" onclick="Update()">Coming Soon</a></li>
+                <li><a href="#" onclick="Update()">Coming Soon</a></li>
+              </ul>
+            </details>
+          </li>
+          <li><a href="#" onclick="Update()">Enterprise</a></li>
+          <li><a href="#" onclick="Update()">Pricing</a></li>
+        </ul>
+      </div>
+
+      <div id="logsign">
+        <a href="#" onclick="Update()"
+          ><button><span></span>Login</button></a
+        >
+        <a href="#" onclick="Update()"
+          ><button><span></span>Sign Up</button></a
+        >
+      </div>
+    </nav>
+
+    <!-- INTRO START  -->
+    <section id="intro">
+      <!-- SVG START  -->
+      <svg id="intro-svg">
+        <circle id="intro-circle-1" />
+        <circle id="intro-circle-2" />
+        <rect id="intro-rect" />
+        <path stroke="#6ce1b7" stroke-width="3px" fill="white" d="M405 295 L425 305 L418 308 L422 315 L418 318 L412 311 L405 316 Z"></path>
+        <path stroke="#F8C953" stroke-width="2px" fill="transparent" d="M437 360 L422 390 L453 390 Z" />
+      </svg>
+      <!-- SVG END  -->
+
+      <!-- Greeetings Start  -->
+      <section id="intro-greeting">
+        <p id="intro-welcome"><span></span><span id="welcome-hide">.....</span> Selamat Datang di TeamFlow</p>
+        <p id="intro-h1">Bekerjalah dengan Caramu Sendiri!</p>
+        <hr id="intro-hline" />
+        <p id="intro-quotes">Ciptakan, Bangun, Kerja Sama, dan Kembangkan Produk dengan Cepat</p>
+        <button id="intro-button" type="button">Ayo mulai!</button>
+      </section>
+      <!-- Greeetings END  -->
+
+      <!-- INTRO PROFILE TEAM START  -->
+      <section id="intro-team">
+        <div id="intro-team-container">
+          <div id="first-person">
+            <figure>
+              <svg style="position: absolute; top: -20px; left: -23px; width: 130%; height: 130%">
+                <path d="M35 35 Q55 15 80 13" stroke="white" stroke-width="5px" fill="none" />
+                <path d="M22 55 Q5 85 15 120" stroke="white" stroke-width="5px" fill="none" />
+              </svg>
+              <img src="img/img-1.jpg" alt="First person" />
+              <figcaption>Aqil</figcaption>
+            </figure>
+            <div id="first-img-detail">
+              <p>Done</p>
+              <p>Muhamad Aqil Maulana</p>
+              <p>Front End Developer</p>
+              <div class="stars">
+                <i class="active-star" data-feather="star"></i>
+                <i class="active-star" data-feather="star"></i>
+                <i class="active-star" data-feather="star"></i>
+                <i class="active-star" data-feather="star"></i>
+                <i class="nonactive-star" data-feather="star"></i>
+              </div>
+            </div>
+            <svg style="position: absolute" width="100%" height="110%">
+              <circle id="tfp-circle" />
+              <path d="M375 115 L350 142 L364 135 L360 150 L370 150 L375 135 L383 145 Z" stroke="#f8c953" stroke-width="2px" fill="white" />
+            </svg>
+          </div>
+
+          <div id="second-person">
+            <figure>
+              <img src="img/img-2.jpg" alt="First person" />
+              <figcaption>Aqil</figcaption>
+            </figure>
+            <div id="second-img-detail">
+              <p>Pending</p>
+              <p>Muhamad Aqil Maulana</p>
+              <p>Video Editor</p>
+              <div class="stars">
+                <i class="active-star" data-feather="star"></i>
+                <i class="active-star" data-feather="star"></i>
+                <i class="active-star" data-feather="star"></i>
+                <i class="active-star" data-feather="star"></i>
+                <i class="active-star" data-feather="star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- INTRO PROFILE TEAM END  -->
+    </section>
+
+    <!-- What You Can Do START  -->
+    <section id="wycd">
+      <hr />
+      <div id="wycd-ask">
+        <p>Kenapa lebih dari 100.000 tim memilih TeamFlow.com</p>
+        <img src="img/Brand.png" alt="Brand" />
+      </div>
+      <h2>Apa yang Bisa <span>Kami Lakukan?</span></h2>
+
+      <div id="wycd-service">
+        <div>
+          <img src="img/Business-planning.png" alt="Perencanaan Bisnis" />
+          <h3>Perencanaan Bisnis</h3>
+          <p>Rencana Bisnis kami merupakan dokumen tertulis yang menjelaskan aktivitas inti perusahaan.</p>
+        </div>
+        <div>
+          <img src="img/Financial-planning.png" alt="Perencanaan Finansial" />
+          <h3>Perencanaan Finansial</h3>
+          <p>Tim ahli kami membuat keputusan yang bijaksana mengenai uang mereka, untuk memastikan mereka mencapai tujuan hidup. Sebuah rencana keuangan.</p>
+        </div>
+        <div>
+          <img src="img/market_icon.png" alt="Analisis Pasar" />
+          <h3>Analisis Pasar</h3>
+          <p>Evaluasi pasar merujuk pada penilaian secara kuantitatif maupun kualitatif dari suatu pasar. Hal ini melibatkan pemeriksaan terhadap ukuran pasar.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR FEATURES START  -->
+    <section id="feature">
+      <h2 id="f-title">Fitur <span>Kami</span></h2>
+      <div id="fe-content">
+        <img src="img/feature-img.png" alt="Fitur IMG" />
+        <div id="f-content">
+          <h2>Mengelola Semua dalam Satu Lingkungan Kerja</h2>
+          <hr />
+          <p>
+            Merencanakan, melacak, dan menghasilkan karya terbaik tim Anda kini semakin mudah. Ruang kerja terpadu yang mudah digunakan, TeamFlow memungkinkan Anda menghabiskan lebih sedikit waktu untuk mengelola pekerjaan Anda dan lebih
+            banyak waktu untuk benar-benar melakukannya.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SET UP START  -->
+    <section id="setup">
+      <div id="setup-text">
+        <h2>Siapkan dalam beberapa menit!</h2>
+        <hr />
+        <p>
+          Memulai dengan cepat dengan ratusan template visual yang bisa disesuaikan - atau buat yang Anda sendiri. Manfaatkan pembuat template online gratis kami untuk membuat template menarik dalam waktu singkat. Pilih dari ratusan
+          template yang telah ada dan sampaikan cerita menggunakan data melalui pembuat infografis tarik-dan-lepas yang sederhana.
+        </p>
+      </div>
+      <div id="setup-img">
+        <img src="img/setup-img.png" alt="Set Up in Minutes" />
+      </div>
+    </section>
+
+    <!-- INTEGRATE START  -->
+    <section id="integrate">
+      <h2><span>Integrasikan</span> dengan alat tersedia dalam beberapa klik</h2>
+      <div id="integrate-pictures">
+        <img src="img/integrate-zoom.png" alt="Zoom" />
+        <img src="img/integrate-img2.png" alt="img-2" />
+        <img src="img/integrate-img3.png" alt="img-3" />
+        <img src="img/integrate-img4.png" alt="img-4" />
+        <img src="img/integrate-img5.png" alt="img-5" />
+      </div>
+      <button onclick="Update()" class="button-more">View All</button>
+    </section>
+
+    <!-- SAVE TIME START  -->
+    <section id="save-time">
+      <img src="img/save-time.png" alt="Save Time " />
+      <div id="save-text">
+        <h2>Hemat waktu dengan Otomatis</h2>
+        <hr />
+        <p>
+          Automatisasi pekerjaan berulang dalam hitungan detik sehingga Anda dapat menghindari kesalahan manusia dan fokus pada hal yang penting. Ini memberikan kesan perangkat lunak yang sangat terotomatisasi yang mengimplikasikan bahwa
+          ini cocok untuk klien yang ingin menghemat waktu dan mengelola anggota tim dengan mudah.
+        </p>
+      </div>
+    </section>
+
+    <!-- VISUALIZE START -->
+    <section id="visualize">
+      <img src="img/visualize-img.png" alt="Visualize " />
+      <div id="visualize-text">
+        <h2>Visualisasikan pekerjaan dengan Tampilan</h2>
+        <hr />
+        <p>Tampilkan data sebagai peta, kalender, garis waktu, kanban, dan banyak lagi. Antarmuka visual yang mudah digunakan memungkinkan anggota tim mana pun untuk langsung ikut serta dan memulai, tanpa perlu pelatihan khusus.</p>
+      </div>
+    </section>
+
+    <!--CUSTOMER START -->
+    <section id="customer">
+      <figure>
+        <img src="img/customer-img.png" alt="customer " />
+        <figcaption>
+          <p>"Kami memastikan bahwa setiap informasi yang Anda butuhkan disajikan segera hanya dengan menghubungi tim kami."</p>
+          <p>Peter Fennimore</p>
+          <p>Head of CS</p>
+        </figcaption>
+      </figure>
+      <div id="customer-text">
+        <h2>Customer Support Selalu Tersedia 7/24</h2>
+        <hr />
+        <p>
+          Tersedia dukungan personal tim kami dalam waktu satu jam yang tersedia 24/7. Sesuai dengan komitmen kami untuk memberikan layanan superior dan profesional. Ikuti seminar web langsung harian, tonton tutorial kami, atau telusuri
+          basis pengetahuan kami.
+        </p>
+        <button onclick="Update()" class="button-more">Read More</button>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS START  -->
+    <section id="testimonials">
+      <h2><span>Client</span><span>Testimonials</span></h2>
+      <div id="testi-container">
+        <figure>
+          <img src="img/testi-main-img.jpg" alt="Main IMG" class="img-testi" />
+          <figcaption>
+            <h2>Muhamad Aqil Maulana</h2>
+            <p>"Fitur-fitur di monday.com membuat proses kerja tim kami menjadi lebih cepat dan lebih mudah diatur."</p>
+          </figcaption>
+        </figure>
+        <img src="img/testi-img-1.jpg" class="img-testi sub-img-testi" />
+        <img src="img/testi-img-2.jpg" class="img-testi sub-img-testi" />
+        <img src="img/testi-img-3.jpg" class="img-testi sub-img-testi" />
+        <img src="img/testi-img-4.jpg" class="img-testi sub-img-testi" />
+        <img src="img/testi-img-5.jpg" class="img-testi sub-img-testi" />
+        <img src="img/testi-img-6.jpg" class="img-testi sub-img-testi" />
+      </div>
+    </section>
+
+    <!-- SUBSCRIBE START -->
+    <section id="subs">
+      <h2>Dukung Kami!</h2>
+      <h1>Langganan dan Dapatkan!</h1>
+      <h3>Kabar Perusahaan</h3>
+
+      <form id="subscribe">
+        <label for="input-email">
+          <input type="email" name="email" id="input-email" placeholder="Email Anda" />
+          <i data-feather="mail" id="mail-input"></i>
+          <button id="langganan" type="submit">
+            <i data-feather="send" id="send"></i>
+            <p>Langganan</p>
+          </button>
+        </label>
+      </form>
+    </section>
+
+    <!-- FOOTER START  -->
+    <footer id="footer">
+      <div>
+        <img src="img/Company_Logo.png" />
+        <p>All Rights Reserved © teamflow.com</p>
+        <h3>Alamat</h3>
+        <a href="https://aqil2514.github.io/portfolio-v3/" target="_blank">Lihat Portofolio saya</a>
+        <div id="social-media">
+          <h3>Social Media</h3>
+          <a href="https://www.facebook.com/muhammadaqil2514" target="_blank"><img src="img/Facebook.png" /></a>
+          <a href="https://www.instagram.com/m.aqilm19/?hl=id" target="_blank"><img src="img/Instagram.png" /></a>
+          <a href="https://twitter.com/Aqil2514" target="_blank"><img src="img/Twitter.png" /></a>
+          <a href="https://www.youtube.com/channel/UC76R4BJqxsK7Qk0nptYphSA" target="_blank"><img src="img/Youtube.png" /></a>
+        </div>
+      </div>
+      <div>
+        <ul>
+          Produk
+          <li><a href="#footer" onclick="Update()">Produk</a></li>
+          <li><a href="#footer" onclick="Update()">Harga</a></li>
+          <li><a href="#footer" onclick="Update()">Perusahaan</a></li>
+          <li><a href="#footer" onclick="Update()">Partner</a></li>
+          <li><a href="#footer" onclick="Update()">Afiliasi</a></li>
+          <li><a href="#footer" onclick="Update()">Integrasi</a></li>
+          <li><a href="#footer" onclick="Update()">Pengembang</a></li>
+          <li><a href="#footer" onclick="Update()">Student</a></li>
+          <li><a href="#footer" onclick="Update()">Work OS</a></li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          Team
+          <li><a href="#footer" onclick="Update()">Tentang Kami</a></li>
+          <li><a href="#footer" onclick="Update()">Kontak Kami</a></li>
+          <li><a href="#footer" onclick="Update()">Karir</a></li>
+          <li><a href="#footer" onclick="Update()">Temukan Partner</a></li>
+          <li><a href="#footer" onclick="Update()">Berita</a></li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          Solusi
+          <li><a href="#footer" onclick="Update()">Manajemen Proyek</a></li>
+          <li><a href="#footer" onclick="Update()">Marketing</a></li>
+          <li><a href="#footer" onclick="Update()">CRM dan Sales</a></li>
+          <li><a href="#footer" onclick="Update()">Pengembangan Software</a></li>
+          <li><a href="#footer" onclick="Update()">Pembangunan</a></li>
+          <li><a href="#footer" onclick="Update()">Produk Kreatif</a></li>
+          <li><a href="#footer" onclick="Update()">Kerja Remot</a></li>
+          <li><a href="#footer" onclick="Update()">HR</a></li>
+          <li><a href="#footer" onclick="Update()">IT</a></li>
+          <li><a href="#footer" onclick="Update()">Lihat solusi lain</a></li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          Resources
+          <li><a href="#footer" onclick="Update()">Pengetahuan Dasar</a></li>
+          <li><a href="#footer" onclick="Update()">Panduan-panduan</a></li>
+          <li><a href="#footer" onclick="Update()">Webinar Harian</a></li>
+          <li><a href="#footer" onclick="Update()">Komunitas</a></li>
+          <li><a href="#footer" onclick="Update()">Cerita Customer</a></li>
+          <li><a href="#footer" onclick="Update()">Template</a></li>
+          <li><a href="#footer" onclick="Update()">Jasa Profesional</a></li>
+          <li><a href="#footer" onclick="Update()">Video Tutorial</a></li>
+          <li><a href="#footer" onclick="Update()">Blog</a></li>
+          <li><a href="#footer" onclick="Update()">Podcast</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- GO TO UP -->
+    <a id="gotoup" href="#intro">&#x2B06;</a>
+
+    <!-- JQUERY  -->
+    <script src="js/jquery-3.7.0.min.js"></script>
+
+    <!-- DATA FEATHER  -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- MY SCRIPT  -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
